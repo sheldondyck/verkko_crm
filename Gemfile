@@ -31,6 +31,14 @@ group :development do
   # gem 'debugger'
 end
 
+group :linux_development do
+  gem 'rb-inotify'
+end
+
+group :mac_development do
+  gem 'rb-fsevent'
+end
+
 group :production do
   gem 'pg'
   # Use unicorn as the web server

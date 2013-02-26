@@ -1,5 +1,16 @@
 VerkkoCrm::Application.routes.draw do
-  root :to => 'pages#home'
+  get "users/new"
+
+  match '/signup',        to: 'users#new'
+ 
+  match '/prospects',     to: 'pages#prospects'
+  match '/agents',        to: 'pages#agents'
+  match '/backoffice',    to: 'pages#backoffice'
+  match '/config_user',   to: 'pages#config_user'
+  match '/home',          to: 'pages#home'
+
+  root                    to: 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

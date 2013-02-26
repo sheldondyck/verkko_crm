@@ -1,0 +1,23 @@
+.navbar.navbar-fixed-top
+  .navbar-inner{:data => {'scollspy' => 'scollspy'}}
+    .container
+      %h4
+        -#= link_to image_tag 'verkko-crm-menubar.png', :class => 'brand'
+        = link_to 'Verkko CRM', home_url, :class => 'brand'
+        %ul.nav
+          %li{:class => active('pages#prospects')}
+            = link_to 'Prospects', prospects_url
+          %li{:class => active('pages#agents')}
+            = link_to 'Agents', agents_url
+          %li{:class => active('pages#backoffice')}
+            = link_to 'Backoffice', backoffice_url
+        -#%ul.nav.pull-right
+          %li{:class => active('pages#config')}
+            = link_to 'Config', config_user_url
+          %li
+            - if signed_in?
+              = link_to 'Logout ' + current_user.name, logout_url, :method => :delete
+            - else
+              = link_to 'Login', login_url
+.navbar-spacer
+-#!= flash_handler

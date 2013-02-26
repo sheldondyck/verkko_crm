@@ -1,0 +1,36 @@
+@import 'bootstrap';
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.debug_dump {
+  font-size: 8pt;
+  position: fixed;
+  width: 400px;
+  right: 0px;
+  bottom: 0px;
+}
+
