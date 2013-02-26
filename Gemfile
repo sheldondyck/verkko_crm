@@ -10,6 +10,7 @@ gem 'therubyracer'
 gem 'jquery-rails'
 gem 'haml'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bootstrap-sass'
 
 group :development do
   gem 'sqlite3'
