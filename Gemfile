@@ -39,6 +39,14 @@ group :mac_development do
   gem 'rb-fsevent'
 end
 
+group :test do
+  gem 'sqlite3'
+  gem 'turn', '>= 0.8.3', :require => false
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+end
+
 group :production do
   gem 'pg'
   # Use unicorn as the web server

@@ -1,7 +1,11 @@
 VerkkoCrm::Application.routes.draw do
   get "users/new"
 
+  resources :sessions, only: [:new, :create, :destroy]
+
   match '/signup',        to: 'users#new'
+  match '/login',         to: 'sessions#new'
+  match '/logout',        to: 'sessions#destroy'
  
   match '/prospects',     to: 'pages#prospects'
   match '/agents',        to: 'pages#agents'
