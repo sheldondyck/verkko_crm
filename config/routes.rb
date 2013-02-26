@@ -1,4 +1,7 @@
 VerkkoCrm::Application.routes.draw do
+  resources :prospects
+
+
   get "users/new"
 
   resources :sessions, only: [:new, :create, :destroy]

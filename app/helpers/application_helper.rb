@@ -19,4 +19,10 @@ module ApplicationHelper
     end
     div
   end
+
+  def error_class(model, sym)
+    if model.errors.messages.has_key?(sym)
+      "error"
+    end
+  end
 end

@@ -2,7 +2,8 @@ class PagesController < ApplicationController
   before_filter :authorize_user
 
   def home
-    #@title = '' 
+    @title = '' 
+    @prospects_cnt = Prospect.count
   end
 
   def prospects

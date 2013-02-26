@@ -1,0 +1,23 @@
+= render 'pages/site_menu'
+.container
+  %p#notice= notice
+
+  %p
+    %b Nome contato:
+    = @prospect.nome_contato
+  %p
+    %b Nome empressa:
+    = @prospect.nome_empressa
+  %p
+    %b Telefone empressa:
+    = @prospect.telefone_empressa
+  %p
+    %b Telefone celular:
+    = @prospect.telefone_celular
+  %p
+    %b Endereco:
+    = @prospect.endereco
+
+  = link_to 'Edit', edit_prospect_path(@prospect)
+  \|
+  = link_to 'Back', prospects_path

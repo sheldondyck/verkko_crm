@@ -9,6 +9,7 @@ gem 'libv8'
 gem 'therubyracer'
 gem 'jquery-rails'
 gem 'haml'
+gem 'haml-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'bootstrap-sass'
 

@@ -1,0 +1,31 @@
+= form_for @prospect do |f|
+  - if @prospect.errors.any?
+    #error_explanation
+      %h3= "Tem #{pluralize(@prospect.errors.count, "erro")} na pagina:"
+      %ul
+        - @prospect.errors.full_messages.each do |msg|
+          %li= msg
+
+  .fieldset
+    .control-group{:class => error_class(@prospect, :nome_contato)}
+      .field
+        = f.label :nome_contato
+        = f.text_field :nome_contato
+    .control-group{:class => error_class(@prospect, :nome_empressa)}
+      .field
+        = f.label :nome_empressa
+        = f.text_field :nome_empressa
+    .control-group{:class => error_class(@prospect, :telefone_empressa)}
+      .field
+        = f.label :telefone_empressa
+        = f.text_field :telefone_empressa
+    .control-group{:class => error_class(@prospect, :telefone_celular)}
+      .field
+        = f.label :telefone_celular
+        = f.text_field :telefone_celular
+    .control-group{:class => error_class(@prospect, :endereco)}
+      .field
+        = f.label :endereco
+        = f.text_field :endereco
+    .actions
+      = button_tag "Salvar", :class => 'btn', 'data-disable-with' => "Processing ..."

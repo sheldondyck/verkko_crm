@@ -1,0 +1,29 @@
+= render 'pages/site_menu'
+.container
+  %h1 Prospects
+
+  %table.table.table-bordered.table-striped
+    %tr
+      %th Nome contato
+      %th Nome empressa
+      %th Telefone empressa
+      %th Telefone celular
+      %th Endereco
+      %th
+      %th
+      %th
+
+    - @prospects.each do |prospect|
+      %tr
+        %td= prospect.nome_contato
+        %td= prospect.nome_empressa
+        %td= prospect.telefone_empressa
+        %td= prospect.telefone_celular
+        %td= prospect.endereco
+        %td= link_to 'Show', prospect
+        %td= link_to 'Edit', edit_prospect_path(prospect)
+        %td= link_to 'Destroy', prospect, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+  %br
+
+  = link_to 'New Prospect', new_prospect_path
