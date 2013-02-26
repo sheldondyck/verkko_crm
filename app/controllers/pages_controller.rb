@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :logged_in_user
+  before_filter :authorize_user
 
   def home
     #@title = '' 
@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   end
 
   private
-    def logged_in_user
+    def authorize_user
       redirect_to login_url, notice: 'Accesso restrito' unless logged_in?
     end
 end
