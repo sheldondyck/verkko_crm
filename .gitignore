@@ -15,8 +15,9 @@
 /tmp
 
 # Ignore secret token.  Must generate new token for each new install.
-# COMMAND: TODO add command
-config/initializers/secret_token.rb
+# COMMAND: heroku config:add SECRET_TOKEN="$(bundle exec rake secret)" 
+# NOTE: not working.  remove secret_token from github later.  for now just commit
+#config/initializers/secret_token.rb
 
 # Ignore unneeded files
 *.log
