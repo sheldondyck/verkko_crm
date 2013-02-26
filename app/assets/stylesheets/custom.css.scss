@@ -26,6 +26,10 @@ textarea {
   margin-bottom: 10px;
 }
 
+.navbar-spacer {
+  height: $navbarHeight;
+}
+
 .debug_dump {
   font-size: 8pt;
   position: fixed;
