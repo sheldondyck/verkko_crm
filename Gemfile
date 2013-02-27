@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'haml'
 gem 'haml-rails'
+gem 'font-awesome-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :development do

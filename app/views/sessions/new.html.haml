@@ -11,10 +11,16 @@
               %legend Login
               .control-group
                 .controls
-                  = f.text_field :email, :class => 'input', :placeholder => 'Email'
+                  .input-prepend
+                    %span.add-on#login
+                      %i.icon-envelope
+                    = f.text_field :email, :class => 'span2', :id => 'inputIcon', :placeholder => 'Email'
               .control-group
                 .controls
-                  = f.password_field :password, :class => 'input', :placeholder => 'Senha'
+                  .input-prepend
+                    %span.add-on#login
+                      %i.icon-key
+                    = f.password_field :password, :class => 'span2', :id => 'inputIcon', :placeholder => 'Senha'
               .control-group
                 %label.control-label
                 .controls
