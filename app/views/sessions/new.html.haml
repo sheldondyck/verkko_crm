@@ -1,21 +1,22 @@
 .container
   != flash_handler
-  .row
-    .span6
-      = image_tag 'verkko_login.png', :id => 'verkko_login'
-    .span6
-      .form-signin
-        = form_for :session, :url => sessions_path, :html => {:class => 'form-sigin' } do |f|
-          .fieldset
-            %legend Login
-            .control-group
-              .controls
-                = f.text_field :email, :class => 'input', :placeholder => 'Email'
-            .control-group
-              .controls
-                = f.password_field :password, :class => 'input', :placeholder => 'Senha'
-            .control-group
-              %label.control-label
-              .controls
-                = button_tag "Login", :class => 'btn btn-primary', 'data-disable-with' => "Processando ..."
+  .login-dialog
+    .row
+      .span6
+        = image_tag 'verkko_login.png', :id => 'verkko_login'
+      .span6
+        .form-signin
+          = form_for :session, :url => sessions_path, :html => {:class => 'form-sigin' } do |f|
+            .fieldset
+              %legend Login
+              .control-group
+                .controls
+                  = f.text_field :email, :class => 'input', :placeholder => 'Email'
+              .control-group
+                .controls
+                  = f.password_field :password, :class => 'input', :placeholder => 'Senha'
+              .control-group
+                %label.control-label
+                .controls
+                  = button_tag "Login", :class => 'btn btn-primary', 'data-disable-with' => "Processando ..."
 -#= render 'pages/footer'
