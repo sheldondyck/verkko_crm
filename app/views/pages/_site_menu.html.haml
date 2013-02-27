@@ -5,7 +5,7 @@
         -#= link_to image_tag 'verkko-crm-menubar.png', :class => 'brand'
         = link_to 'Verkko CRM', home_url, :class => 'brand'
         %ul.nav
-          %li{:class => active('pages#prospects')}
+          %li{:class => active_controller('prospects')}
             = link_to 'Prospects', prospects_url
           %li{:class => active('pages#agents')}
             = link_to 'Agents', agents_url
