@@ -7,11 +7,12 @@ gem 'rails', '3.2.12'
 
 gem 'libv8'
 gem 'therubyracer'
+gem 'jqplot-rails' #, :git => 'https://github.com/Guidecase/jqplot-rails.git'
 gem 'jquery-rails'
+gem 'bootstrap-sass'
 gem 'haml'
 gem 'haml-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'bootstrap-sass'
 
 group :development do
   gem 'sqlite3'

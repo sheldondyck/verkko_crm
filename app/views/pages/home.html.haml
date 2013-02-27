@@ -3,3 +3,5 @@
   %h2 
     Numero de Prospects Ativo:
     = @prospects_cnt
+  %p
+    = jqplot 200, 400, [[1, 2, 3, 4], [4, 3, 2, 1]], {legend: {show: true}} 
