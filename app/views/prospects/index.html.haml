@@ -20,10 +20,10 @@
         %td= prospect.telefone_empressa
         %td= prospect.telefone_celular
         %td= prospect.endereco
-        %td= link_to 'Show', prospect
-        %td= link_to 'Edit', edit_prospect_path(prospect)
-        %td= link_to 'Destroy', prospect, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Mostrar', prospect
+        %td= link_to 'Editar', edit_prospect_path(prospect)
+        %td= link_to 'Apagar', prospect, :method => :delete, :data => { :confirm => 'Tem certeza?' }
 
   %br
 
-  = link_to 'New Prospect', new_prospect_path
+  = link_to 'Novo Prospect', new_prospect_path
