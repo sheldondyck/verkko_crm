@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @title = '' 
     @prospects_cnt = Prospect.count
+    @agents_cnt = 0
   end
 
   def prospects

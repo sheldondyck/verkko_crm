@@ -13,5 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require jqplot
+//= require jqplot/plugins/highlighter
+//= require jqplot/plugins/pieRenderer
+//= require jqplot/plugins/dateAxisRenderer
 //= require bootstrap
 //= require_tree .

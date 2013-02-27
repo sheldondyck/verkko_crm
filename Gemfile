@@ -7,7 +7,7 @@ gem 'rails', '3.2.12'
 
 gem 'libv8'
 gem 'therubyracer'
-gem 'jqplot-rails' #, :git => 'https://github.com/Guidecase/jqplot-rails.git'
+gem 'jqplot-rails'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'haml'
