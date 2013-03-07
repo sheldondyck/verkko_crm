@@ -1,47 +1,50 @@
 = render 'site_menu'
 .container
   %p
-    = jqplot 350, 900, [[[0, 59], [1, 48], [2, 57], [3, 45], [4, 37], [5, 48], [6, 52], [7, 58], [8, 69], [9, 31], [10, 36], [11, 23], [12, 32], [13, 20], [14, 67], [15, 68], [16, 52], [17, 47], [18, 60], [19, 89]]]
+    %center
+      = jqplot 350, 900, [[[0, 59], [1, 48], [2, 57], [3, 45], [4, 37], [5, 48], [6, 52], [7, 58], [8, 69], [9, 31], [10, 36], [11, 23], [12, 32], [13, 20], [14, 67], [15, 68], [16, 52], [17, 47], [18, 60], [19, 89]]]
   .row
     .span6
-      %h3 
-        Numero de Prospects Ativo:
-        = @prospects_cnt
-      #pie_chart_prospects
-      :javascript
-        $(document).ready(function(){
-            var plot1 = $.jqplot('pie_chart_prospects', [[['a',25],['b',14],['c',7]]], {
-              grid: {
-                drawBorder: false,
-                drawGridlines: false,
-                background: '#f5f5f5',
-                shadow: false
-              },
-              seriesDefaults:{
-                renderer:$.jqplot.PieRenderer,
-                rendererOptions: { 
-                  showDataLabels: false }
-              }
-            });
-        });
+      %center
+        %h3
+          Numero de Prospects Ativo:
+          = @prospects_cnt
+        #pie_chart_prospects
+        :javascript
+          $(document).ready(function(){
+              var plot1 = $.jqplot('pie_chart_prospects', [[['a',25],['b',14],['c',7]]], {
+                grid: {
+                  drawBorder: false,
+                  drawGridlines: false,
+                  background: '#f5f5f5',
+                  shadow: false
+                },
+                seriesDefaults:{
+                  renderer:$.jqplot.PieRenderer,
+                  rendererOptions: {
+                    showDataLabels: false }
+                }
+              });
+          });
     .span6
-      %h3 
-        Numero de Agents Ativo:
-        = @agents_cnt
-      #pie_chart_agents
-      :javascript
-        $(document).ready(function(){
-          var plot1 = $.jqplot('pie_chart_agents', [[['a',75],['b',10],['c',10],['d',5]]], {
-              grid: {
-                drawBorder: false,
-                drawGridlines: false,
-                background: '#f5f5f5',
-                shadow: false
-              },
-              seriesDefaults:{
-                renderer:$.jqplot.PieRenderer,
-                rendererOptions: { 
-                  showDataLabels: false }
-              }
-            });
-        });
+      %center
+        %h3
+          Numero de Agents Ativo:
+          = @agents_cnt
+        #pie_chart_agents
+        :javascript
+          $(document).ready(function(){
+            var plot1 = $.jqplot('pie_chart_agents', [[['a',75],['b',10],['c',10],['d',5]]], {
+                grid: {
+                  drawBorder: false,
+                  drawGridlines: false,
+                  background: '#f5f5f5',
+                  shadow: false
+                },
+                seriesDefaults:{
+                  renderer:$.jqplot.PieRenderer,
+                  rendererOptions: {
+                    showDataLabels: false }
+                }
+              });
+          });
