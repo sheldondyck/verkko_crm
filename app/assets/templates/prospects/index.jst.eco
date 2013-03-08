@@ -1,0 +1,32 @@
+<h1>Rendering Prospect through Backbone.js!</h1>
+
+<table class="table table-bordered table-striped">
+<tr>
+  <th>Nome Contato</th>
+  <th>Nome Empressa </th>
+  <th>Telefone Empressa </th>
+  <th>Telefone Celular</th>
+  <th>Endereco</th>
+</tr>
+<% for prospect in @prospects.models: %>
+  <tr>
+  <td>
+    <%= prospect.get('nome_contato') %>
+  </td>
+  <td>
+    <%= prospect.get('nome_empressa') %>
+  </td>
+  <td>
+    <%= prospect.get('telefone_empressa') %>
+  </td>
+  <td>
+    <%= prospect.get('telefone_celular') %>
+  </td>
+  <td>
+    <%= prospect.get('endereco') %>
+  </td>
+  </tr>
+<% end %>
+</table>
+<%= @prospects.length %>
+

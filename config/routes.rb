@@ -1,6 +1,7 @@
 VerkkoCrm::Application.routes.draw do
-  resources :prospects
-
+  scope 'api' do
+    resources :prospects
+  end
 
   get "users/new"
 

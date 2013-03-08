@@ -4,7 +4,7 @@
       = link_to image_tag('verkko_logo_menubar.png', :class => 'logotipo') + ' Verkko CRM', home_url, :class => 'brand'
       %ul.nav
         %li{:class => active_controller('prospects')}
-          = link_to 'Prospects Corban', prospects_url
+          = link_to 'Prospects Corban', '/prospects/#prospects'
         %li{:class => active('pages#agents')}
           = link_to 'Agents Corban', agents_url
         %li{:class => active('pages#backoffice')}

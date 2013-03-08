@@ -1,15 +1,14 @@
 class ProspectsController < ApplicationController
   before_filter :authorize_user
+  respond_to :json
+  respond_to :html
 
   # GET /prospects
   # GET /prospects.json
   def index
     @prospects = Prospect.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @prospects }
-    end
+    respond_with @prospects
   end
 
   # GET /prospects/1

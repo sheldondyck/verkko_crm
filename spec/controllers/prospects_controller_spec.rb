@@ -24,7 +24,12 @@ describe ProspectsController do
   # Prospect. As you add validations to Prospect, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "nome_contato" => "MyString" }
+    { "nome_contato" => "Nome Contato Test",
+      "nome_empressa" => "Nome Empressa Test",
+      "telefone_empressa" => "(11) 4234-4312",
+      "telefone_celular" => "(11) 5234-4312",
+      "endereco" => "Rua Test 1243"
+    }
   end
 
   # This should return the minimal set of values that should be in the session
